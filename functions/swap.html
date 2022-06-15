@@ -1,56 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Conversion Calculator</title>
-        <link rel="stylesheet" href="../css/style.css">
-    
-    </head>
-    
-    <body>
-        
-        <h1 id="title">
-            Swap Variables Challenge
-        </h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversion Calculator</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
 
-        <div id="app">
-            
-        </div>
-        
-        <!-- Start of Script -->
-        <script>
-            
-            // Use prompt function to get input from user:
-            let varOne = prompt("Enter first variable");
-            let varTwo = prompt("Enter second variable");
+  <body>
+    <h1 id="title">Swap Variables Challenge</h1>
 
-            // Swapping values:
-            /*
-                Replace these comments and text with logic and code
-                that will swap the values of varOne and varTwo
-            */
+    <div id="app"></div>
 
-            // Printing results:
-            console.log("The value of varOne after swapping is: " + varOne);
-            console.log("The value of varTwo after swapping is: " + varTwo);
+    <!-- Start of Script -->
+    <script>
+      // Use prompt function to get input from user:
+      let varOne = prompt('Enter first variable');
+      let varTwo = prompt('Enter second variable');
 
-            // ----- Extra funcitonality to display in DOM for reference ----- //
+      // Swapping values:
 
-            // get reference to DOM element with id = "app"
-            const appElement = document.getElementById("app");
+      [varTwo, varOne] = [varOne, varTwo];
 
-            // Add strings to innerHTML of element
-            appElement.innerHTML += "The value of varOne after swapping is: " + varOne;
-            appElement.innerHTML += "<br><br>";
-            appElement.innerHTML += "The value of varTwo after swapping is: " + varTwo;
+      // Printing results:
+      console.log('The value of varOne after swapping is: ' + varOne);
+      console.log('The value of varTwo after swapping is: ' + varTwo);
 
+      // ----- Extra funcitonality to display in DOM for reference ----- //
 
-        </script>
-        <!-- End of Script -->
+      // get reference to DOM element with id = "app"
+      const appElement = document.getElementById('app');
 
-    </body>
-
+      // Add strings to innerHTML of element
+      appElement.innerHTML +=
+        'The value of varOne after swapping is: ' + varOne;
+      appElement.innerHTML += '<br><br>';
+      appElement.innerHTML +=
+        'The value of varTwo after swapping is: ' + varTwo;
+    </script>
+    <!-- End of Script -->
+  </body>
 </html>
